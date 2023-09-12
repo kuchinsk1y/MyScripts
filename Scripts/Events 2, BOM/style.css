@@ -1,0 +1,104 @@
+body {
+  font-family: "Bebas Neue", cursive;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(80, 25, 163, 1) 0%,
+    rgba(92, 28, 170, 0.7791491596638656) 0%,
+    rgba(7, 42, 106, 1) 0%,
+    rgba(8, 35, 138, 1) 16%,
+    rgba(30, 30, 179, 0.9164040616246498) 37%,
+    rgba(22, 86, 166, 1) 51%,
+    rgba(0, 212, 255, 1) 63%,
+    rgba(44, 183, 212, 1) 89%
+  );
+}
+
+.slider {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  height: 300px;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 200px;
+}
+
+.slider .item img {
+  object-fit: cover;
+  width: 1000px;
+  height: 500px;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.slider .prev,
+.slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  width: auto;
+  margin-top: -25px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  margin-left: -958px;
+}
+
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: 357px;
+}
+
+.slider .prev:hover,
+.slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideText {
+  position: absolute;
+  color: #fff;
+  font-size: 35px;
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+.slider-dots {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.slider-dots_item {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+  background-color: #aaa;
+}
+
+.slider .item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
